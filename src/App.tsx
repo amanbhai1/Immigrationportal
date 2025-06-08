@@ -6,12 +6,12 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
+import DashboardNew from "./pages/Dashboard";
 import ImmigrationFile from "./pages/ImmigrationFile";
 import CRSScore from "./pages/CRSScore";
 import DocumentUpload from "./pages/DocumentUpload";
-import ApplicationCategory from "./pages/ApplicationCategory";
-import Checklist from "./pages/Checklist";
+import ApplicationCategoryNew from "./pages/ApplicationCategory";
+import ChecklistNew from "./pages/ChecklistNew";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -62,7 +62,7 @@ const AppRoutes = () => {
       path="/dashboard" 
       element={
         <ProtectedRoute>
-          <Dashboard />
+          <DashboardNew />
         </ProtectedRoute>
       } 
     />
@@ -94,7 +94,7 @@ const AppRoutes = () => {
       path="/application-category"
       element={
         <ProtectedRoute>
-          <ApplicationCategory />
+          <ApplicationCategoryNew />
         </ProtectedRoute>
       }
     />
@@ -102,7 +102,7 @@ const AppRoutes = () => {
       path="/checklist" 
       element={
         <ProtectedRoute>
-          <Checklist />
+          <ChecklistNew />
         </ProtectedRoute>
       } 
     />
